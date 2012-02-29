@@ -21,7 +21,7 @@ libdvdnav_la_LIBADD = $(THREAD_LIBS) $(DVDREAD_LIBS) \
 
 libdvdnav_la_LDFLAGS = \
 	-version-info $(DVDNAV_LT_CURRENT):$(DVDNAV_LT_REVISION):$(DVDNAV_LT_AGE) \
-	-export-symbols-regex "(^dvdnav.*|^nav.*|^ifo.*|^DVD.*)"
+	-export-symbols-regex "(^dvdnav.*|^nav.*|^ifo.*|^DVD.*)" $(DVDREAD_LIBS)
 #	-release $(DVDNAV_MAJOR).$(DVDNAV_MINOR).$(DVDNAV_SUB)
 
 libdvdnavmini_la_SOURCES = $(libdvdnav_la_SOURCES)
